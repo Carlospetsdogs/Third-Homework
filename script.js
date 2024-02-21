@@ -19,6 +19,11 @@ function writePassword() {
 
 }
 
+var upperArray = ["A", "B", "C"]
+var lowerArray = ["a", "b", "c"]
+var numArray = ["1", "2", "3"]
+var specialArray = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split("")
+
 function generatePassword(){
 var passwordLength = prompt("Enter length of password"); 
 if (passwordLength < 8 || passwordLength > 128 ){
@@ -30,6 +35,9 @@ var lowerCaseletters = confirm("Would you like lowercase characters?")
 var specialcharacters = confirm("Would you like to use special characters?")
 var numericcharacters = confirm("Would you like numeric characters?")
 
+if (upperCaseletters === true){
+
+}
 
     return "hello"
 }

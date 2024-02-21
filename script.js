@@ -19,11 +19,12 @@ function writePassword() {
 
 }
 
-var upperArray = ["A", "B", "C"]
+var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
 var lowerArray = ["a", "b", "c"]
 var numArray = ["1", "2", "3"]
 var specialArray = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split("")
 var selectedCharacters = []
+var finalArray = []
 
 function generatePassword(){
 var passwordLength = prompt("Enter length of password"); 
@@ -49,7 +50,17 @@ if (specialcharacters === true){
     selectedCharacters = selectedCharacters.concat(specialArray);
 }
 console.log(selectedCharacters)
-    return "hello"
+
+for(var i = 0; i < passwordLength; i++){
+    // grab random decimal based on length of selectedCharacter array and round down to whole number
+    var randomIndex = Math.floor(Math.random() * selectedCharacters.length)
+    var charValue = selectedCharacters[randomIndex]
+
+    finalArray.push(charValue)
+    console.log(finalArray)
+}
+
+    return finalArray.join("")
 }
 
 

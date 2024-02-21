@@ -20,7 +20,7 @@ function writePassword() {
 }
 
 var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
-var lowerArray = ["a", "b", "c"]
+var lowerArray = "abcdefghijklmnopqrstuvwxyz".split("")
 var numArray = ["1", "2", "3"]
 var specialArray = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split("")
 var selectedCharacters = []

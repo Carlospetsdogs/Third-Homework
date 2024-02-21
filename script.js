@@ -23,6 +23,7 @@ var upperArray = ["A", "B", "C"]
 var lowerArray = ["a", "b", "c"]
 var numArray = ["1", "2", "3"]
 var specialArray = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split("")
+var selectedCharacters = []
 
 function generatePassword(){
 var passwordLength = prompt("Enter length of password"); 
@@ -36,9 +37,18 @@ var specialcharacters = confirm("Would you like to use special characters?")
 var numericcharacters = confirm("Would you like numeric characters?")
 
 if (upperCaseletters === true){
-
+    selectedCharacters = selectedCharacters.concat(upperArray);
 }
-
+if (lowerCaseletters === true){
+    selectedCharacters = selectedCharacters.concat(lowerArray);
+}
+if (numericcharacters === true){
+    selectedCharacters = selectedCharacters.concat(numArray);
+}
+if (specialcharacters === true){
+    selectedCharacters = selectedCharacters.concat(specialArray);
+}
+console.log(selectedCharacters)
     return "hello"
 }
 

@@ -19,9 +19,11 @@ function writePassword() {
 
 }
 
+// Number arrays and vaules
+
 var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
 var lowerArray = "abcdefghijklmnopqrstuvwxyz".split("")
-var numArray = ["1", "2", "3"]
+var numArray = "1234567890".split("")
 var specialArray = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split("")
 var selectedCharacters = []
 var finalArray = []
@@ -32,11 +34,13 @@ if (passwordLength < 8 || passwordLength > 128 ){
     alert("password must be greater than 8 characters and less than 128 characters")
     return 
 }
+//Text prompts
 var upperCaseletters = confirm("Would you like uppercase characters?")
 var lowerCaseletters = confirm("Would you like lowercase characters?")
 var specialcharacters = confirm("Would you like to use special characters?")
 var numericcharacters = confirm("Would you like numeric characters?")
 
+//If statements based on user input data 
 if (upperCaseletters === true){
     selectedCharacters = selectedCharacters.concat(upperArray);
 }
